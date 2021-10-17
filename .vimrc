@@ -1,11 +1,15 @@
 set nocompatible
 
 call plug#begin('~/.vim/plugged')
-  "Vim
-  Plug 'preservim/nerdtree'
-  Plug 'airblade/vim-gitgutter'
+  " Vim
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'preservim/nerdtree'
   Plug 'gruvbox-community/gruvbox'
+
+  " Git
+  Plug 'airblade/vim-gitgutter'
 
   " Completion for pairs + quotes etc.
   Plug 'jiangmiao/auto-pairs'
@@ -56,6 +60,12 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" Telescope keymappings
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " {{{ coc
 
